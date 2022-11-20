@@ -1,3 +1,3 @@
 function draw() {
-    background(220);
+    background('rgb(200,100,100)');
 }
