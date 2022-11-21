@@ -13,9 +13,9 @@ class ball {
         fill('white')
         circle(this.x - this.r / 5, this.y - this.r / 5, this.r / 3)
     }
-    launch(mouseX, mouseY) {
-        this.vx = (mouseX - this.x) / 30
-        this.vy = (mouseY - this.y) / 30
+    launch(testX, testY) {
+        this.vx = (testX - this.x) / 30
+        this.vy = (testY - this.y) / 30
         en_cour = false
     }
     mouve() {
