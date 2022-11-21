@@ -14,8 +14,8 @@ class ball {
         circle(this.x - this.r / 5, this.y - this.r / 5, this.r / 3)
     }
     launch(testX, testY) {
-        this.vx = (testX - this.x) / 60
-        this.vy = (testY - this.y) / 60
+        this.vx = (testX - this.x) / 30
+        this.vy = (testY - this.y) / 30
         en_cour = false
     }
     mouve() {
@@ -23,7 +23,5 @@ class ball {
         this.y += this.vy;
         this.rebond();
     }
-    rebond(j) {
-        if (obts) {}
-    }
+    rebond() {}
 }
