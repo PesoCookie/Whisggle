@@ -13,13 +13,17 @@ class ball {
         fill('white')
         circle(this.x - this.r / 5, this.y - this.r / 5, this.r / 3)
     }
-    launch() {
-
+    launch(testX, testY) {
+        this.vx = (testX - this.x) / 60
+        this.vy = (testY - this.y) / 60
+        en_cour = false
     }
     mouve() {
-
+        this.x += this.vx;
+        this.y += this.vy;
+        this.rebond();
     }
-    rebond() {
-
+    rebond(j) {
+        if (obts) {}
     }
 }
