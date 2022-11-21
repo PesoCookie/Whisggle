@@ -1,4 +1,3 @@
-
 let bord
 let fond
 
@@ -11,7 +10,8 @@ var en_cour, main;
 function preload() {
     bord = loadImage('assets/bord.png');
     fond = loadImage('assets/fond.jpg');
-  }
+}
+
 function setup() {
     // Creation du canvas 
     createCanvas(1270, 600);
@@ -19,6 +19,5 @@ function setup() {
     stroke(100);
     frameRate(60);
     en_cour = true;
-    test = false;
     main = new ball;
 }
