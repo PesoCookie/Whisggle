@@ -16,8 +16,7 @@ function draw() {
  * @description Exécuté à chaque clic
  */
 function mousePressed() {
-    if (en_cours == true) {
+    if (en_cours != true) {
         balle_principale.launch(mouseX, mouseY);
     }
-
 }
