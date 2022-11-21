@@ -1,3 +1,4 @@
 function draw() {
-    background('rgb(200,100,100)');
-}
+    background(100);
+    circle( width / 2 , 0 , width / 7);
+}   

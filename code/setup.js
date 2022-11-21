@@ -1,3 +1,6 @@
 function setup() {
-    createCanvas(400, 400);
+    // Creation du canvas 
+    createCanvas(1270, 600);
+    fill(255);
+    stroke(100);
 }
