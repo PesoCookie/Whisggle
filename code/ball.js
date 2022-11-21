@@ -1,7 +1,7 @@
 class ball {
     constructor() {
-        this.x = 0;
-        this.y = 0;
+        this.x = width / 2;
+        this.y = 20;
         this.vx = 0;
         this.vy = 0;
         this.r = 20;
@@ -12,5 +12,14 @@ class ball {
         circle(this.x, this.y, this.r)
         fill('white')
         circle(this.x - this.r / 5, this.y - this.r / 5, this.r / 3)
+    }
+    launch() {
+
+    }
+    mouve() {
+
+    }
+    rebond() {
+
     }
 }
