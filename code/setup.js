@@ -15,7 +15,7 @@ let fond;
  * @type {Ball}
  * @name balle_principale
  */
-let balle_principale = new Ball();
+let balle_principale;
 /**
  * @global
  * @type {boolean}
@@ -43,4 +43,6 @@ function setup() {
     stroke(100);
     // Images par seconde
     frameRate(60);
+
+    balle_principale = new Ball();
 }
