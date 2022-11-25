@@ -33,8 +33,8 @@ class Ball {
          * @param {Point2d} point Position du point
          */
     launch(mouseX, mouseY) {
-            this.speed.x = (mouseX - this.position.x) / (width / 50)
-            this.speed.y = (mouseY - this.position.y) / (width / 50)
+            this.speed.x = (mouseX - this.position.x) / (width / 100)
+            this.speed.y = (mouseY - this.position.y) / (width / 100)
             en_cours = true
         }
         /**
