@@ -36,7 +36,7 @@ class Ball {
             en_cours = true
         }
         /**
-         * @description Mouvement de la balleezfnfjozejf
+         * @description Mouvement de la balle
          */
     mouve() {
         this.position.add(this.speed);
