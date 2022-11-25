@@ -22,7 +22,12 @@ let balle_principale;
  * @name en_cours
  */
 let en_cours = false;
-
+/**
+ * @global
+ * @type {score}
+ * @name currentScore
+ */
+ let currentScore;
 /**
  * @description Précharge les images et assets
  */
@@ -43,6 +48,10 @@ function setup() {
     stroke(100);
     // Images par seconde
     frameRate(60);
+    //Parametre du texte
+    textSize(15);
 
     balle_principale = new Ball();
+    currentScore = new score(0);
+    
 }
