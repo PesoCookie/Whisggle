@@ -36,7 +36,7 @@ function preload() {
  */
 function setup() {
     // Creation du canvas 
-    createCanvas(1270, 600);
+    createCanvas( window.innerWidth, window.innerHeight);
     // Couleur de base
     fill(255);
     // Taille des contours
