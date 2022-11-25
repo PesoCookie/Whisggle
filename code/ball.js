@@ -57,5 +57,9 @@ class Ball {
         this.speed.x = 0
         this.speed.y = 0
     }
-    rebond() {}
+    rebond() {
+        if (this.position.x >= width || this.position.x <= 0) {
+            this.speed.x = -this.speed.x
+        }
+    }
 }
