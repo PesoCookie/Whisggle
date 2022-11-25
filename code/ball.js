@@ -12,6 +12,7 @@ class Ball {
      */
     constructor() {
             this.position = new Point2d(width / 2, height / 20);
+            this.reset;
             this.speed = new Point2d(0, 0);
             this.gravity = height / 1000
             this.radius = 20;
@@ -41,10 +42,20 @@ class Ball {
          */
     mouve() {
         if (en_cours) {
-            this.speed.y += this.gravity
+            this.speed.y += this.gravity;
+            if (this.position.y >= height) {
+                en_cours = false;
+                this.initialisation();
+            }
         }
         this.position.add(this.speed);
         this.rebond();
+    }
+    initialisation() {
+        this.reset = new Point2d(width / 2, height / 20);
+        this.position = this.reset
+        this.speed.x = 0
+        this.speed.y = 0
     }
     rebond() {}
 }
