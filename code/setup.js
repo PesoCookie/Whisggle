@@ -12,6 +12,12 @@ let bord;
 let fond;
 /**
  * @global
+ * @type {any}
+ * @name fondScore
+ */
+ let fondScore;
+/**
+ * @global
  * @type {Ball}
  * @name balle_principale
  */
@@ -28,12 +34,25 @@ let en_cours = false;
  * @name currentScore
  */
  let currentScore;
+ /**
+ * @global
+ * @type {int}
+ * @name maxScore
+ */
+  let maxScore;
+ /**
+ * @global
+ * @type {string}
+ * @name affichageString
+ */
+  let affichageString;
 /**
  * @description Précharge les images et assets
  */
 function preload() {
     bord = loadImage('assets/bord.png');
     fond = loadImage('assets/fond.jpg');
+    fondScore = loadImage('assets/Fond_Score.png')
     fontImpact = loadFont('fonts/PartyConfetti.ttf')
 }
 
@@ -50,8 +69,10 @@ function setup() {
     // Images par seconde
     frameRate(60);
     //Parametre du texte
-    textSize(65);
+    textSize(window.innerWidth / 35);
     textFont(fontImpact);
+
+    maxScore = 10 // Valeur temporaire, a faire selon le nombre d'obstacle max  
 
     balle_principale = new Ball();
     currentScore = new score(0);
