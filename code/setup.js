@@ -34,6 +34,7 @@ let en_cours = false;
 function preload() {
     bord = loadImage('assets/bord.png');
     fond = loadImage('assets/fond.jpg');
+    fontImpact = loadFont('fonts/PartyConfetti.ttf')
 }
 
 /**
@@ -49,7 +50,8 @@ function setup() {
     // Images par seconde
     frameRate(60);
     //Parametre du texte
-    textSize(15);
+    textSize(65);
+    textFont(fontImpact);
 
     balle_principale = new Ball();
     currentScore = new score(0);
