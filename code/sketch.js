@@ -7,6 +7,7 @@ function draw() {
     image(fond, 0, 0, width, height, 0, 0, fond.width, fond.height)
     image(bord, 0, 0, width, height, 0, 0, bord.width, bord.height,LEFT);
     circle(width / 2, 0, width / 7);
+    text(currentScore.score , width / 10 , height / 10 )
 
     balle_principale.draw();
     balle_principale.mouve();
