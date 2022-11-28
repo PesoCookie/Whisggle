@@ -10,12 +10,12 @@ class Ball {
      * @constructor
      * @description Crée une nouvelle instance d'une balle
      */
-    constructor() {
+    constructor(radius) {
             this.position = new Point2d(width / 2, height / 20);
             this.reset;
             this.speed = new Point2d(0, 0);
             this.gravity = height / 1000
-            this.radius = 20;
+            this.radius = radius;
             this.color = 'rgb(170,169,173)';
         }
         /**
@@ -30,11 +30,8 @@ class Ball {
         }
         /**
          * @description Initialise le mouvement de la balle selon la position du point donné (généralement position du curseur)
-         * @param {Point2d} point Position du point
          */
-    launch(mouseX, mouseY) {
-            this.speed.x = (mouseX - this.position.x) / (width / 100)
-            this.speed.y = (mouseY - this.position.y) / (width / 100)
+    launch() {
             en_cours = true
         }
         /**
@@ -47,9 +44,12 @@ class Ball {
                 en_cours = false;
                 this.initialisation();
             }
+            this.position.add(this.speed);
+            this.rebond();
+        } else {
+            this.speed.x = (mouseX - this.position.x) / (width / 100);
+            this.speed.y = (mouseY - this.position.y) / (width / 100);
         }
-        this.position.add(this.speed);
-        this.rebond();
     }
     initialisation() {
         this.reset = new Point2d(width / 2, height / 20);

@@ -15,7 +15,7 @@ let fond;
  * @type {any}
  * @name fondScore
  */
- let fondScore;
+let fondScore;
 /**
  * @global
  * @type {Ball}
@@ -33,19 +33,25 @@ let en_cours = false;
  * @type {score}
  * @name currentScore
  */
- let currentScore;
- /**
+let currentScore;
+/**
  * @global
  * @type {int}
  * @name maxScore
  */
-  let maxScore;
- /**
+let maxScore;
+/**
  * @global
  * @type {string}
  * @name affichageString
  */
-  let affichageString;
+let affichageString;
+/**
+ * @global
+ * @type {Point2d}
+ * @name Position_mouse
+ */
+let Position_mouse;
 /**
  * @description Précharge les images et assets
  */
@@ -61,7 +67,7 @@ function preload() {
  */
 function setup() {
     // Creation du canvas 
-    createCanvas( window.innerWidth, window.innerHeight);
+    createCanvas(window.innerWidth, window.innerHeight);
     // Couleur de base
     fill(255);
     // Taille des contours
@@ -71,10 +77,12 @@ function setup() {
     //Parametre du texte
     textSize(window.innerWidth / 35);
     textFont(fontImpact);
+    // position de la souris
+    Position_mouse = new Point2d(mouseX, mouseY)
 
     maxScore = 10 // Valeur temporaire, a faire selon le nombre d'obstacle max  
 
-    balle_principale = new Ball();
+    balle_principale = new Ball(20);
     currentScore = new score(0);
-    
+
 }
