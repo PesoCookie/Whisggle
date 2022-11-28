@@ -62,4 +62,10 @@ class Ball {
             this.speed.x = -this.speed.x
         }
     }
+    collision(x,y,r){
+        if (dist(this.position.x,this.position.y,x,y)<=((this.radius+r)/1.8)){
+            this.speed.y = (-(this.speed.y))/1.5
+            this.speed.x = (-(this.speed.x))/1.5
+        }
+    }
 }
