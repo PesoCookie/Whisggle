@@ -16,6 +16,17 @@ function draw() {
     affichageString = ` Score : ${currentScore.score} / ${maxScore} `
     text(affichageString, width / 70, height / 10)
 
+
+    for (j=0 ; j<nbBallesColonne; j++){
+        for (i=0 ; i<nbBallesligne; i++){
+            X[j][i].draw();
+        } 
+    }
+    for (j=0 ; j<nbBallesColonne; j++){
+        for (i=0 ; i<nbBallesligne; i++){
+            balle_principale.collision(X[j][i].position.x,X[j][i].position.y,X[j][i].radius);
+        } 
+    }
     balle_principale.draw();
     balle_principale.mouve();
     Position_mouse.x = mouseX

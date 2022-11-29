@@ -36,6 +36,18 @@ let en_cours = false;
 let currentScore;
 /**
  * @global
+ * @type {nbBallesligne}
+ * @name nbBallesligne
+ */
+  let nbBallesligne;
+/**
+ * @global
+ * @type {nbBallesColonne}
+ * @name nbBallesColonne
+ */
+let nbBallesColonne;
+ /**
+ * @global
  * @type {int}
  * @name maxScore
  */
@@ -84,5 +96,12 @@ function setup() {
 
     balle_principale = new Ball(20);
     currentScore = new score(0);
-
+    nbBallesligne = 30
+    nbBallesColonne = 5
+    maxScore = nbBallesColonne*nbBallesligne // Valeur temporaire, a faire selon le nombre d'obstacle max  
+    balle_principale = new Ball();
+    currentScore = new score(0);
+    tableau();
+    
 }
+
