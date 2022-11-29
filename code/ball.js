@@ -50,6 +50,7 @@ class Ball {
             this.speed.x = (mouseX - this.position.x) / (width / 100);
             this.speed.y = (mouseY - this.position.y) / (width / 100);
         }
+        print(this.position)
     }
     initialisation() {
         this.reset = new Point2d(width / 2, height / 20);
@@ -62,10 +63,34 @@ class Ball {
             this.speed.x = -this.speed.x
         }
     }
-    collision(x,y,r){
-        if (dist(this.position.x,this.position.y,x,y)<=((this.radius+r)/1.8)){
-            this.speed.y = (-(this.speed.y))/1.5
-            this.speed.x = (-(this.speed.x))/1.5
+    collision(x, y, r) {
+        if (dist(this.position.x, this.position.y, x, y) <= ((this.radius + r) / 2)) {
+            if (this.position.y >= y) {
+                if (this.speed.y < 0) {
+                    this.speed.y = -this.speed.y / 1.05
+                } else {
+                    this.speed.y = +this.speed.y
+                }
+            } else {
+                if (this.speed.y > 0) {
+                    this.speed.y = -this.speed.y / 1.05
+                } else {
+                    this.speed.y = +this.speed.y
+                }
+            }
+            if (this.position.x >= x) {
+                if (this.speed.x < 0) {
+                    this.speed.x = -this.speed.x / 1.01
+                } else {
+                    this.speed.x = +this.speed.x
+                }
+            } else {
+                if (this.speed.x > 0) {
+                    this.speed.x = -this.speed.x / 1.01
+                } else {
+                    this.speed.x = +this.speed.x
+                }
+            }
         }
     }
 }

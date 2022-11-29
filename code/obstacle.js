@@ -14,17 +14,18 @@ class Obstacle {
         this.color = color
         this.radius = radius
     }
-    draw(){
+    draw() {
         fill(this.color);
         circle(this.position.x, this.position.y, this.radius);
     }
 }
-function tableau(){
-    X =new Array(nbBallesColonne)
-    for (j=0 ; j<nbBallesColonne; j++){
+
+function tableau() {
+    X = new Array(nbBallesColonne)
+    for (j = 0; j < nbBallesColonne; j++) {
         X[j] = new Array(nbBallesligne)
-        for (i=0 ; i<nbBallesligne; i++){
-            X[j][i]= new Obstacle(25, 255, width/4+(30*i), height/2 + j*50)
+        for (i = 0; i < nbBallesligne; i++) {
+            X[j][i] = new Obstacle(25, 255, width / 7 + (70 * i), height / 2 + j * 60)
         }
     }
 }

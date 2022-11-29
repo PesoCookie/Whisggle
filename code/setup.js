@@ -91,8 +91,8 @@ function setup() {
     textFont(fontImpact);
     // position de la souris
     Position_mouse = new Point2d(mouseX, mouseY)
-
-    nbBallesligne = 30
+    balle_principale = new Ball(width / 70);
+    nbBallesligne = 20
     nbBallesColonne = 5
     maxScore = nbBallesColonne * nbBallesligne // Valeur temporaire, a faire selon le nombre d'obstacle max  
     currentScore = new score(0);
