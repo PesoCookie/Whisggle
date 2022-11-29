@@ -62,6 +62,9 @@ class Ball {
         if (this.position.x >= width || this.position.x <= 0) {
             this.speed.x = -this.speed.x
         }
+        if (this.position.y <= height / 100) {
+            this.speed.y = -this.speed.y
+        }
     }
     collision(x, y, r) {
         if (dist(this.position.x, this.position.y, x, y) <= ((this.radius + r) / 2)) {
