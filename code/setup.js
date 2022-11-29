@@ -39,14 +39,14 @@ let currentScore;
  * @type {nbBallesligne}
  * @name nbBallesligne
  */
-  let nbBallesligne;
+let nbBallesligne;
 /**
  * @global
  * @type {nbBallesColonne}
  * @name nbBallesColonne
  */
 let nbBallesColonne;
- /**
+/**
  * @global
  * @type {int}
  * @name maxScore
@@ -92,16 +92,10 @@ function setup() {
     // position de la souris
     Position_mouse = new Point2d(mouseX, mouseY)
 
-    maxScore = 10 // Valeur temporaire, a faire selon le nombre d'obstacle max  
-
-    balle_principale = new Ball(20);
-    currentScore = new score(0);
     nbBallesligne = 30
     nbBallesColonne = 5
-    maxScore = nbBallesColonne*nbBallesligne // Valeur temporaire, a faire selon le nombre d'obstacle max  
-    balle_principale = new Ball();
+    maxScore = nbBallesColonne * nbBallesligne // Valeur temporaire, a faire selon le nombre d'obstacle max  
     currentScore = new score(0);
     tableau();
-    
-}
 
+}
