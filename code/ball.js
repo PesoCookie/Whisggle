@@ -52,7 +52,6 @@ class Ball {
             this.speed.x = map(this.speed.x, 0, width, 0, width / 50);
             this.speed.y = map(this.speed.y, 0, height, 0, width / 50);
         }
-        print(this.position)
     }
     initialisation() {
         this.reset = new Point2d(width / 2, height / 20);

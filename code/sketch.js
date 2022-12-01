@@ -33,6 +33,10 @@ function draw() {
     Position_mouse.y = mouseY
     if (en_cours != true) {
         trajectoire(dist(balle_principale.position.x, balle_principale.position.y, Position_mouse.x, Position_mouse.y))
+        for (i = 0; i > fantom_number; i++) {
+            fantom_tbl = Array[fantom_number]
+            fantom_tbl[i] = balle_principale.position
+        }
     }
 }
 
@@ -49,7 +53,5 @@ function mousePressed() {
  * @description Prédit la trajectoire de la boule
  */
 function trajectoire(distance) {
-    var nombre_de_balle;
-    nombre_de_balle = round(distance / (balle_principale.radius * 2));
-
+    fantom_number = round(distance / (balle_principale.radius * 2));
 }
