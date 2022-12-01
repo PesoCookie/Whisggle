@@ -47,8 +47,10 @@ class Ball {
             this.position.add(this.speed);
             this.rebond();
         } else {
-            this.speed.x = (mouseX - this.position.x) / (width / 100);
-            this.speed.y = (mouseY - this.position.y) / (width / 100);
+            this.speed.x = (mouseX - this.position.x)
+            this.speed.y = (mouseY - this.position.y)
+            this.speed.x = map(this.speed.x, 0, width, 0, width / 50);
+            this.speed.y = map(this.speed.y, 0, height, 0, width / 50);
         }
         print(this.position)
     }
@@ -70,13 +72,13 @@ class Ball {
         if (dist(this.position.x, this.position.y, x, y) <= ((this.radius + r) / 2)) {
             if (this.position.y >= y) {
                 if (this.speed.y < 0) {
-                    this.speed.y = -this.speed.y / 1.05
+                    this.speed.y = -this.speed.y / 1.1
                 } else {
                     this.speed.y = +this.speed.y
                 }
             } else {
                 if (this.speed.y > 0) {
-                    this.speed.y = -this.speed.y / 1.05
+                    this.speed.y = -this.speed.y / 1.1
                 } else {
                     this.speed.y = +this.speed.y
                 }
