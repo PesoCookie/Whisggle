@@ -27,6 +27,12 @@ let en_cours = false;
  * @type {score}
  * @name currentScore
  */
+ let obstacleRadius = 25;
+ /**
+  * @global
+  * @type {integer}
+  * @name obstacleRadius
+  */
  let currentScore;
 /**
  * @description Précharge les images et assets
