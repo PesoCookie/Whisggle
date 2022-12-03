@@ -25,7 +25,12 @@ function tableau() {
     for (j = 0; j < nbBallesColonne; j++) {
         X[j] = new Array(nbBallesligne)
         for (i = 0; i < nbBallesligne; i++) {
-            X[j][i] = new Obstacle(25, 255, width / 7 + (70 * i), height / 2 + j * 60)
+            X[j][i] = new Obstacle(25, 255, offsetBall + (70 * i), height / 2 + j * 60)
         }
     }
+}
+
+function offset() {
+
+    offsetBall = (width - ((60) * nbBallesligne)) / 2
 }
