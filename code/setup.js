@@ -84,6 +84,12 @@ var fantom_tbl;
  */
 var offsetBall
     /**
+     * @global
+     * @type {int}
+     * @name obstacleRadius
+     */
+var obstacleRadius
+    /**
      * @description Précharge les images et assets
      */
 function preload() {
@@ -115,6 +121,7 @@ function setup() {
     nbBallesColonne = 6
     maxScore = nbBallesColonne * nbBallesligne // Valeur temporaire, a faire selon le nombre d'obstacle max  
     currentScore = new score(0);
+    obstacleRadius = 30
     offset();
     tableau();
 
