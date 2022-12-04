@@ -31,6 +31,5 @@ function tableau() {
 }
 
 function offset() {
-
-    offsetBall = (width - ((60) * nbBallesligne)) / 2
+    offsetBall = (width - (70) * (nbBallesligne)) / 2 + 25
 }
