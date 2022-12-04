@@ -20,10 +20,7 @@ class score {
 
     add(addition , multiplicator) {
 
-        if( typeof(multiplicator) == 'undefined' ){
-            multiplicator = 1;
-        }
-        this.score += addition * multiplicator; // Ajoute au score avec multiplicateur possible
+        this.score += round(addition * multiplicator); // Ajoute au score avec multiplicateur possible
         
         
     }

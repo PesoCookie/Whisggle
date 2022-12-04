@@ -56,6 +56,9 @@ class Ball {
         }
     };
     initialisation() {
+        currentScore.add(Score,multiplicateur)
+        Score = 0
+        multiplicateur = 0
         this.position.set(this.reset)
         this.speed.set(new Point2d(0, 0))
     }
@@ -94,6 +97,10 @@ class Ball {
                 } else {
                     this.speed.x = +this.speed.x
                 }
+            }
+            if (X[i][j].color == 255){
+                Score = Score + 1
+                multiplicateur = multiplicateur + 0.5
             }
             X[i][j].color = 100
         }

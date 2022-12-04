@@ -6,6 +6,18 @@
 let bord;
 /**
  * @global
+ * @type {number}
+ * @name Score
+ */
+ var Score = 0;
+/**
+ * @global
+ * @type {number}
+ * @name multiplicateur
+ */
+ var multiplicateur = 0;
+/**
+ * @global
  * @type {any}
  * @name fond
  */
