@@ -11,8 +11,8 @@ class Pit {
      * @descrition construit le trou
      */
     constructor() {
-        this.size = new Point2d(width / 10, height / 50);
-        this.position = new Point2d(random(0, width - this.size.x), height / 1.01);
+        this.size = new Point2d(width / 10, height);
+        this.position = new Point2d(random(0, width - this.size.x), height / 1.05);
         this.vitesse = new Point2d(width / 600, 0);
     }
     mouve() {
