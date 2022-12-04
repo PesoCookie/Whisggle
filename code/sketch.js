@@ -16,13 +16,13 @@ function draw() {
     text(affichageString, width / 70, height / 10)
 
 
-    for (i = 0; i < nbBallesColonne; i++) {
-        for (j = 0; j < nbBallesligne; j++) {
+    for (i = 0; i < nbBallesligne; i++) {
+        for (j = 0; j < nbBallesColonne; j++) {
             X[i][j].draw();
         }
     }
-    for (i = 0; i < nbBallesColonne; i++) {
-        for (j = 0; j < nbBallesligne; j++) {
+    for (i = 0; i < nbBallesligne; i++) {
+        for (j = 0; j < nbBallesColonne; j++) {
             balle_principale.collision(i, j);
         }
     }
