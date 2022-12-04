@@ -121,7 +121,7 @@ function setup() {
     nbBallesColonne = 6
     maxScore = nbBallesColonne * nbBallesligne // Valeur temporaire, a faire selon le nombre d'obstacle max  
     currentScore = new score(0);
-    obstacleRadius = 30
+    obstacleRadius = width / 53
     offset();
     tableau();
 
