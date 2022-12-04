@@ -35,7 +35,3 @@ function tableau() {
         }
     }
 }
-
-function offset() {
-    offsetBall = (width - (70) * (nbBallesligne)) / 2 + obstacleRadius
-}

@@ -91,12 +91,6 @@ let longueur = 0;
 /**
  * @global
  * @type {int}
- * @name offsetBall
- */
-var offsetBall;
-/**
- * @global
- * @type {int}
  * @name obstacleRadius
  */
 var obstacleRadius;
@@ -148,7 +142,6 @@ function setup() {
     nbBallesColonne = 6;
     maxScore = nbBallesColonne * nbBallesligne;
     obstacleRadius = width / 53;
-    offset();
     tableau();
     //Le score
     currentScore = new score(0);
