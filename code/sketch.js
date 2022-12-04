@@ -31,8 +31,8 @@ function draw() {
     if (en_cours != true) {
         trajectoire(dist(balle_principale.position.x, balle_principale.position.y, mouseX, mouseY))
         for (i = 1; i < fantom.number + 1; i++) {
-            fantom.x = balle_principale.position.x + balle_principale.speed.x * (i * 2)
-            fantom.y = balle_principale.position.y + balle_principale.speed.y * (i * 2) + balle_principale.gravity * ((i * 1.5) ** 2)
+            fantom.x = balle_principale.position.x + balle_principale.speed.x * i * 2
+            fantom.y = balle_principale.position.y + balle_principale.speed.y * i * 2 + balle_principale.gravity * (i ** 2) * 2
             fantom.radius = balle_principale.radius / i
             circle(fantom.x, fantom.y, fantom.radius)
         }
