@@ -70,15 +70,28 @@ let Position_mouse;
  * @name fantom_number
  */
 var fantom_number;
-/**
- * @global
- * @type {Array}
- * @name fantom_tbl
- */
+let longueur = 0
+    /**
+     * @global
+     * @type {Array}
+     * @name fantom_tbl
+     */
 var fantom_tbl;
 /**
- * @description Précharge les images et assets
+ * @global
+ * @type {int}
+ * @name offsetBall
  */
+var offsetBall
+    /**
+     * @global
+     * @type {int}
+     * @name obstacleRadius
+     */
+var obstacleRadius
+    /**
+     * @description Précharge les images et assets
+     */
 function preload() {
     bord = loadImage('assets/bord.png');
     fond = loadImage('assets/fond.jpg');
@@ -104,10 +117,12 @@ function setup() {
     // position de la souris
     Position_mouse = new Point2d(mouseX, mouseY)
     balle_principale = new Ball(width / 70);
-    nbBallesligne = 20
-    nbBallesColonne = 5
+    nbBallesligne = 22
+    nbBallesColonne = 6
     maxScore = nbBallesColonne * nbBallesligne // Valeur temporaire, a faire selon le nombre d'obstacle max  
     currentScore = new score(0);
+    obstacleRadius = width / 53
+    offset();
     tableau();
 
 }
