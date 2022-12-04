@@ -48,6 +48,12 @@ let en_cours = false;
 let currentScore;
 /**
  * @global
+ * @type {int}
+ * @name health
+ */
+let health;
+/**
+ * @global
  * @type {nbBallesligne}
  * @name nbBallesligne
  */
@@ -67,9 +73,15 @@ let maxScore;
 /**
  * @global
  * @type {string}
- * @name affichageString
+ * @name affichageScore
  */
-let affichageString;
+let affichageScore;
+/**
+ * @global
+ * @type {string}
+ * @name affichageVie
+ */
+ let affichageVie;
 /**
  * @global
  * @type {int}
@@ -142,6 +154,11 @@ function setup() {
     nbBallesColonne = 6;
     maxScore = nbBallesColonne * nbBallesligne;
     obstacleRadius = width / 53;
+<<<<<<< Updated upstream
+=======
+    health = 3;
+    offset();
+>>>>>>> Stashed changes
     tableau();
     //Le score
     currentScore = new score(0);

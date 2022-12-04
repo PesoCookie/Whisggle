@@ -12,8 +12,15 @@ function draw() {
 
     circle(width / 2, 0, width / 7); // Il y a des chances que cette ligne soit inutile dans le future
     // Affiche le score
+<<<<<<< Updated upstream
     affichageString = ` Score : ${currentScore.score}`
     text(affichageString, width / 70, height / 10)
+=======
+    affichageScore = `Score : ${currentScore.score} / ${maxScore} `
+    affichageVie = `Vie : ${health}`
+    text(affichageScore, width / 70, height / 12)
+    text(affichageVie, width / 70, height / 7)
+>>>>>>> Stashed changes
 
 
     for (i = 0; i < nbBallesligne; i++) {

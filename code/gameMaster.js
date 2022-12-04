@@ -24,6 +24,12 @@ class score {
         
         
     }
+}
 
-
+function healthCheck(){
+    if (health <= 0){
+        affichageVie = ` TA PERDU GROS NUL avec un score de : ${currentScore.score} `
+        text(affichageVie, width / 4, height / 2)
+        noLoop()
+    }
 }

@@ -61,6 +61,8 @@ class Ball {
         multiplicateur = 0
         this.position.set(this.reset)
         this.speed.set(new Point2d(0, 0))
+        health -= 1
+        healthCheck()
     }
     rebond() {
         if (this.position.x >= width || this.position.x <= 0) {
