@@ -68,7 +68,7 @@ class Ball {
             this.speed.y = -this.speed.y
         }
     }
-    collision(x, y, r) {
+    collision(x, y, r,j,i) {
         if (dist(this.position.x, this.position.y, x, y) <= ((this.radius + r) / 2)) {
             if (this.position.y >= y) {
                 if (this.speed.y < 0) {
@@ -85,17 +85,18 @@ class Ball {
             }
             if (this.position.x >= x) {
                 if (this.speed.x < 0) {
-                    this.speed.x = -this.speed.x / 1.01
+                    this.speed.x = -this.speed.x / 1.05
                 } else {
                     this.speed.x = +this.speed.x
                 }
             } else {
                 if (this.speed.x > 0) {
-                    this.speed.x = -this.speed.x / 1.01
+                    this.speed.x = -this.speed.x / 1.05
                 } else {
                     this.speed.x = +this.speed.x
                 }
             }
+            X[j][i].color = 100
         }
     }
 }

@@ -17,6 +17,12 @@ class Obstacle {
     draw() {
         fill(this.color);
         circle(this.position.x, this.position.y, this.radius);
+        if(en_cours!=true) {
+            if(this.color==100){
+                this.radius = 0
+                this.position.x = width*2
+            }
+        }
     }
 }
 

@@ -22,10 +22,17 @@ function draw() {
             X[j][i].draw();
         }
     }
+<<<<<<< Updated upstream
     for (j = 0; j < nbBallesColonne; j++) {
         for (i = 0; i < nbBallesligne; i++) {
             balle_principale.collision(X[j][i].position.x, X[j][i].position.y, X[j][i].radius);
         }
+=======
+    for (j=0 ; j<nbBallesColonne; j++){
+        for (i=0 ; i<nbBallesligne; i++){
+            balle_principale.collision(X[j][i].position.x,X[j][i].position.y,X[j][i].radius,j,i);
+        } 
+>>>>>>> Stashed changes
     }
     balle_principale.draw();
     balle_principale.mouve();
