@@ -16,34 +16,29 @@ function draw() {
     text(affichageString, width / 70, height / 10)
 
 
-    for (j = 0; j < nbBallesColonne; j++) {
-        for (i = 0; i < nbBallesligne; i++) {
-            X[j][i].draw();
+    for (i = 0; i < nbBallesColonne; i++) {
+        for (j = 0; j < nbBallesligne; j++) {
+            X[i][j].draw();
         }
     }
-<<<<<<< Updated upstream
-    for (j = 0; j < nbBallesColonne; j++) {
-        for (i = 0; i < nbBallesligne; i++) {
-            balle_principale.collision(X[j][i].position.x, X[j][i].position.y, X[j][i].radius);
+    for (i = 0; i < nbBallesColonne; i++) {
+        for (j = 0; j < nbBallesligne; j++) {
+            balle_principale.collision(i, j);
         }
-=======
-    for (j=0 ; j<nbBallesColonne; j++){
-        for (i=0 ; i<nbBallesligne; i++){
-            balle_principale.collision(X[j][i].position.x,X[j][i].position.y,X[j][i].radius,j,i);
-        } 
->>>>>>> Stashed changes
     }
     balle_principale.draw();
     balle_principale.mouve();
-    Position_mouse.x = mouseX
-    Position_mouse.y = mouseY
     if (en_cours != true) {
-        trajectoire(dist(balle_principale.position.x, balle_principale.position.y, Position_mouse.x, Position_mouse.y))
-        for (i = 0; i > fantom_number; i++) {
-            fantom_tbl = Array[fantom_number]
-            fantom_tbl[i] = balle_principale.position
+        trajectoire(dist(balle_principale.position.x, balle_principale.position.y, mouseX, mouseY))
+        for (i = 1; i < fantom.number + 1; i++) {
+            fantom.x = balle_principale.position.x + balle_principale.speed.x * (i * 2)
+            fantom.y = balle_principale.position.y + balle_principale.speed.y * (i * 2) + balle_principale.gravity * ((i * 1.5) ** 2)
+            fantom.radius = balle_principale.radius / i
+            circle(fantom.x, fantom.y, fantom.radius)
         }
     }
+    magic_pit.show();
+    magic_pit.mouve();
 }
 
 /**
@@ -59,5 +54,6 @@ function mousePressed() {
  * @description Prédit la trajectoire de la boule
  */
 function trajectoire(distance) {
-    fantom_number = round(distance / (balle_principale.radius * 2));
+    fantom.distance = distance / (balle_principale.radius * 2)
+    fantom.number = round(distance / (balle_principale.radius * 2) / 2);
 }

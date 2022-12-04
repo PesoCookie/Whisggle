@@ -17,10 +17,10 @@ class Obstacle {
     draw() {
         fill(this.color);
         circle(this.position.x, this.position.y, this.radius);
-        if(en_cours!=true) {
-            if(this.color==100){
+        if (en_cours != true) {
+            if (this.color == 100) {
                 this.radius = 0
-                this.position.x = width*2
+                this.position.x = width * 2
             }
         }
     }
@@ -28,10 +28,10 @@ class Obstacle {
 
 function tableau() {
     X = new Array(nbBallesColonne)
-    for (j = 0; j < nbBallesColonne; j++) {
-        X[j] = new Array(nbBallesligne)
-        for (i = 0; i < nbBallesligne; i++) {
-            X[j][i] = new Obstacle(obstacleRadius, 255, offsetBall + (70 * i), height / 2 + j * 60)
+    for (i = 0; i < nbBallesColonne; i++) {
+        X[i] = new Array(nbBallesligne)
+        for (j = 0; j < nbBallesligne; j++) {
+            X[i][j] = new Obstacle(obstacleRadius, 255, offsetBall + (70 * j), height / 2 + i * 60)
         }
     }
 }

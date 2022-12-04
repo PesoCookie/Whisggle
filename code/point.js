@@ -10,15 +10,19 @@ class Point2d {
      * @param {number} y Position sur l'axe y
      */
     constructor(x, y) {
-        this.x = x;
-        this.y = y;
-    }
-    /**
-     * @description Aditionne le x et y des deux points en modifiant l'instance courante
-     * @param {Point2d} point Le point à ajouter
-     */
+            this.x = x;
+            this.y = y;
+        }
+        /**
+         * @description Aditionne le x et y des deux points en modifiant l'instance courante
+         * @param {Point2d} point Le point à ajouter
+         */
     add(point) {
         this.x += point.x;
-        this.y += point.y; 
+        this.y += point.y;
+    }
+    set(point) {
+        this.x = point.x;
+        this.y = point.y;
     }
 }

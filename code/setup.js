@@ -60,38 +60,49 @@ let maxScore;
 let affichageString;
 /**
  * @global
- * @type {Point2d}
- * @name Position_mouse
- */
-let Position_mouse;
-/**
- * @global
  * @type {int}
  * @name fantom_number
  */
-var fantom_number;
-let longueur = 0
-    /**
-     * @global
-     * @type {Array}
-     * @name fantom_tbl
-     */
-var fantom_tbl;
+var fantom = {
+    x: 0,
+    y: 0,
+    radius: 0,
+    number: 0,
+    distance: 0
+};
+/**
+ * @global
+ * @type {int}
+ * @name longueur
+ */
+let longueur = 0;
 /**
  * @global
  * @type {int}
  * @name offsetBall
  */
-var offsetBall
-    /**
-     * @global
-     * @type {int}
-     * @name obstacleRadius
-     */
-var obstacleRadius
-    /**
-     * @description Précharge les images et assets
-     */
+var offsetBall;
+/**
+ * @global
+ * @type {int}
+ * @name obstacleRadius
+ */
+var obstacleRadius;
+/**
+ * @global
+ * @type {pit}
+ * @name magic_pit
+ */
+var magic_pit;
+/**
+ * @global
+ * @type {int}
+ * @name nbr_essay
+ */
+var nbr_essay;
+/**
+ * @description Précharge les images et assets
+ */
 function preload() {
     bord = loadImage('assets/bord.png');
     fond = loadImage('assets/fond.jpg');
@@ -114,15 +125,19 @@ function setup() {
     //Parametre du texte
     textSize(window.innerWidth / 35);
     textFont(fontImpact);
-    // position de la souris
-    Position_mouse = new Point2d(mouseX, mouseY)
+    // balle qu'on vas lancer
     balle_principale = new Ball(width / 70);
-    nbBallesligne = 22
-    nbBallesColonne = 6
-    maxScore = nbBallesColonne * nbBallesligne // Valeur temporaire, a faire selon le nombre d'obstacle max  
-    currentScore = new score(0);
-    obstacleRadius = width / 53
+    // nbr de balle qu'on peut lancer
+    nbr_essay = 10;
+    // un rectangle qui nous donne des balles en plus
+    magic_pit = new Pit;
+    //Definition des obstacles
+    nbBallesligne = 22;
+    nbBallesColonne = 6;
+    maxScore = nbBallesColonne * nbBallesligne;
+    obstacleRadius = width / 53;
     offset();
     tableau();
-
+    //Le score
+    currentScore = new score(0);
 }
