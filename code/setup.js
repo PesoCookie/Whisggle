@@ -154,7 +154,7 @@ function setup() {
     nbBallesColonne = 6;
     maxScore = nbBallesColonne * nbBallesligne;
     obstacleRadius = width / 53;
-    health = 3;
+    health = 10;
     tableau();
     //Le score
     currentScore = new score(0);

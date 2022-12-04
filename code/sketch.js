@@ -17,7 +17,7 @@ function draw() {
     text(affichageScore, width / 70, height / 12)
     text(affichageVie, width / 70, height / 7)
 
-
+    healthCheck()
     for (i = 0; i < nbBallesligne; i++) {
         for (j = 0; j < nbBallesColonne; j++) {
             X[i][j].draw();
