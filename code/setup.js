@@ -154,11 +154,7 @@ function setup() {
     nbBallesColonne = 6;
     maxScore = nbBallesColonne * nbBallesligne;
     obstacleRadius = width / 53;
-<<<<<<< Updated upstream
-=======
     health = 3;
-    offset();
->>>>>>> Stashed changes
     tableau();
     //Le score
     currentScore = new score(0);
