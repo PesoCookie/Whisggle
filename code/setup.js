@@ -96,6 +96,12 @@ var fantom = {
 };
 /**
  * @global
+ * @type {string}
+ * @name affichageCombo
+ */
+let affichageMultiplicateur
+/**
+ * @global
  * @type {int}
  * @name longueur
  */
@@ -154,7 +160,7 @@ function setup() {
     nbBallesColonne = 6;
     maxScore = nbBallesColonne * nbBallesligne;
     obstacleRadius = width / 53;
-    health = 10;
+    health = 25;
     tableau();
     //Le score
     currentScore = new score(0);

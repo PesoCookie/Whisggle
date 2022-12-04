@@ -59,9 +59,11 @@ class Ball {
         currentScore.add(Score,multiplicateur)
         Score = 0
         multiplicateur = 0
+        health -= 1
+        this.collision2()
         this.position.set(this.reset)
         this.speed.set(new Point2d(0, 0))
-        health -= 1
+        
     }
     rebond() {
         if (this.position.x >= width || this.position.x <= 0) {
@@ -105,5 +107,11 @@ class Ball {
             }
             X[i][j].color = 100
         }
+    }
+    collision2()
+    {
+    if(dist(this.position.x , this.position.y , magic_pit.position.x , magic_pit.position.y  ) < this.radius + 100){
+        health += 1
+    }
     }
 }

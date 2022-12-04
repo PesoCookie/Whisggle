@@ -2,7 +2,7 @@
  * @description Pit that give you moar balls
  * @property {Point2d} position Position de la balle dans un plan 2d
  * @property {Point2d} speed Vitesse de la balle à chaque mouvement, défini en interne avec launch()
- * @property {number} radius Rayon de la balle
+ * @property {number} size taille
  * @property {string} color Couleur de la balle
  */
 class Pit {
@@ -26,4 +26,5 @@ class Pit {
     show() {
         rect(this.position.x, this.position.y, this.size.x, this.size.y, 20, 20, 0, 0);
     }
+
 }

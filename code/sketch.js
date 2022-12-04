@@ -14,8 +14,10 @@ function draw() {
     // Affiche le score
     affichageScore = `Score : ${currentScore.score}`
     affichageVie = `Vie : ${health}`
+    affichageMultiplicateur= `Multiplicateur : ${multiplicateur}`
     text(affichageScore, width / 70, height / 12)
     text(affichageVie, width / 70, height / 7)
+    text(affichageMultiplicateur, width / 70, height / 5)
 
     healthCheck()
     for (i = 0; i < nbBallesligne; i++) {
