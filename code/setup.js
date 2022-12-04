@@ -65,6 +65,18 @@ let affichageString;
  */
 let Position_mouse;
 /**
+ * @global
+ * @type {int}
+ * @name fantom_number
+ */
+var fantom_number;
+/**
+ * @global
+ * @type {Array}
+ * @name fantom_tbl
+ */
+var fantom_tbl;
+/**
  * @description Précharge les images et assets
  */
 function preload() {
