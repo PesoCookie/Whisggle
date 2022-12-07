@@ -52,18 +52,18 @@ class Ball {
             this.speed.x = (mouseX - this.position.x)
             this.speed.y = (mouseY - this.position.y)
             this.speed.x = map(this.speed.x, 0, width, 0, width / 30);
-            this.speed.y = map(this.speed.y, 0, height, 0, width / 30);
+            this.speed.y = map(this.speed.y, 0, height, 0, height / 30);
         }
     };
     initialisation() {
-        currentScore.add(Score,multiplicateur)
+        currentScore.add(Score, multiplicateur)
         Score = 0
         multiplicateur = 0
         health -= 1
         this.collision2()
         this.position.set(this.reset)
         this.speed.set(new Point2d(0, 0))
-        
+
     }
     rebond() {
         if (this.position.x >= width || this.position.x <= 0) {
@@ -101,17 +101,16 @@ class Ball {
                     this.speed.x = +this.speed.x
                 }
             }
-            if (X[i][j].color == 255){
+            if (X[i][j].color == 255) {
                 Score = Score + 1
                 multiplicateur = multiplicateur + 0.5
             }
             X[i][j].color = 100
         }
     }
-    collision2()
-    {
-    if(dist(this.position.x , this.position.y , magic_pit.position.x , magic_pit.position.y  ) < this.radius + 100){
-        health += 1
-    }
+    collision2() {
+        if (dist(this.position.x, this.position.y, magic_pit.position.x, magic_pit.position.y) < this.radius + 100) {
+            health += 1
+        }
     }
 }
