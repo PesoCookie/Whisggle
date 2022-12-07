@@ -1,19 +1,25 @@
 /**
- * @description Balle
- * @property {Point2d} position Position de la balle dans un plan 2d
- * @property {number} radius Rayon de la balle
- * @property {string} color Couleur de la balle
+ * @description Obstacle
+ * @property {Point2d} position Position de l'obstacle dans un plan 2d
+ * @property {number} radius Rayon de l'obstacle
+ * @property {string} color Couleur de l'obstacle
  */
 class Obstacle {
     /**
      * @constructor
      * @description Crée une nouvelle instance d'une balle
+     * @property {Point2d} position Position de l'obstacle dans un plan 2d
+     * @property {number} radius Rayon de l'obstacle
+     * @property {string} color Couleur de l'obstacle
      */
     constructor(radius, color, positionx, positiony) {
         this.position = new Point2d(positionx, positiony);
         this.color = color
         this.radius = radius
-    }
+    };
+    /**
+     * @description Dessine l'obstacle
+     */
     draw() {
         fill(this.color);
         circle(this.position.x, this.position.y, this.radius);
@@ -26,6 +32,9 @@ class Obstacle {
     }
 }
 
+/**
+ * @description Créer le tableau qui définit l'emplacement de tout les obstacles
+ */
 function tableau() {
     X = new Array(nbBallesligne)
     for (i = 0; i < nbBallesligne; i++) {

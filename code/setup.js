@@ -9,13 +9,13 @@ let bord;
  * @type {number}
  * @name Score
  */
- var Score = 0;
+var Score = 0;
 /**
  * @global
  * @type {number}
  * @name multiplicateur
  */
- var multiplicateur = 0;
+var multiplicateur = 0;
 /**
  * @global
  * @type {any}
@@ -81,7 +81,7 @@ let affichageScore;
  * @type {string}
  * @name affichageVie
  */
- let affichageVie;
+let affichageVie;
 /**
  * @global
  * @type {int}
@@ -99,7 +99,7 @@ var fantom = {
  * @type {string}
  * @name affichageCombo
  */
-let affichageMultiplicateur
+let affichageMultiplicateur;
 /**
  * @global
  * @type {int}
@@ -119,12 +119,6 @@ var obstacleRadius;
  */
 var magic_pit;
 /**
- * @global
- * @type {int}
- * @name nbr_essay
- */
-var nbr_essay;
-/**
  * @description Précharge les images et assets
  */
 function preload() {
@@ -140,28 +134,25 @@ function preload() {
 function setup() {
     // Creation du canvas 
     createCanvas(window.innerWidth, window.innerHeight);
-    // Couleur de base
-    fill(255);
-    // Taille des contours
+    //Couleur des contours
     stroke(100);
     // Images par seconde
     frameRate(60);
     //Parametre du texte
     textSize(window.innerWidth / 35);
     textFont(fontImpact);
-    // balle qu'on vas lancer
+    //Balle qu'on vas lancer
     balle_principale = new Ball(width / 70);
-    // nbr de balle qu'on peut lancer
-    nbr_essay = 10;
-    // un rectangle qui nous donne des balles en plus
+    //Un puit qui nous donne des balles en plus
     magic_pit = new Pit;
     //Definition des obstacles
     nbBallesligne = 22;
     nbBallesColonne = 6;
     maxScore = nbBallesColonne * nbBallesligne;
     obstacleRadius = width / 53;
-    health = 25;
     tableau();
+    //Nombre d'essai
+    health = 25;
     //Le score
     currentScore = new score(0);
 }

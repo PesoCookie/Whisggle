@@ -66,10 +66,10 @@ class Ball {
 
     }
     rebond() {
-        if (this.position.x >= width || this.position.x <= 0) {
+        if (this.position.x >= width - this.radius || this.position.x <= 0 + this.radius) {
             this.speed.x = -this.speed.x / 1.1
         }
-        if (this.position.y <= height / 100) {
+        if (this.position.y <= 0 + this.radius) {
             this.speed.y = -this.speed.y / 1.1
         }
     }
