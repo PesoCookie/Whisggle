@@ -195,5 +195,7 @@ function setup() {
     health = 25;
     //Le score
     currentScore = new score(0);
-    musique.play();
+    if (Playing == true) {
+        musique.play();
+    }
 }

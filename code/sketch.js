@@ -70,8 +70,7 @@ function mousePressed() {
             balle_principale.launch();
         }
     } else {
-        if (mouseX < width / 2 + (height + width) / 10 & mouseX > width / 2 - (height + width) / 10 &
-            mouseY < height / 2 + height / 10 & mouseY > height / 2 - height / 10) {
+        if (mouseX < width / 2 + (height + width) / 10 & mouseX > width / 2 - (height + width) / 10 & mouseY < height / 2 + height / 10 & mouseY > height / 2 - height / 10) {
             Playing = true;
             setup();
         }
