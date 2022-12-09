@@ -16,7 +16,7 @@ class Obstacle {
         this.position = new Point2d(positionx, positiony);
         this.color = color
         this.radius = radius
-    };
+    }
     /**
      * @description Dessine l'obstacle
      */
@@ -27,7 +27,6 @@ class Obstacle {
             if (this.color == 100) {
                 this.radius = 0
                 this.position.x = width * 2
-                this.color = 200
                 nbBalleRestante -= 1
             }
         }
@@ -38,11 +37,16 @@ class Obstacle {
  * @description Créer le tableau qui définit l'emplacement de tout les obstacles
  */
 function tableau() {
-    X = new Array(nbBallesligne)
+    X = new Array(nbBallesligne);
     for (i = 0; i < nbBallesligne; i++) {
         X[i] = new Array(nbBallesColonne)
         for (j = 0; j < nbBallesColonne; j++) {
-            X[i][j] = new Obstacle(obstacleRadius, 255, map(i, 0, nbBallesligne, 0 + obstacleRadius * 3, width - obstacleRadius * 2), map(j, 0, nbBallesColonne, height / 2, height - obstacleRadius * 2))
+            if (j % 2) {
+                offset = obstacleRadius
+            } else {
+                offset = 0
+            }
+            X[i][j] = new Obstacle(obstacleRadius, 255, map(i, 0, nbBallesligne, obstacleRadius * 3 + offset, width - obstacleRadius * 2 + offset), map(j, 0, nbBallesColonne, height / 2, height - obstacleRadius * 2))
         }
     }
 }

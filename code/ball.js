@@ -58,7 +58,8 @@ class Ball {
     initialisation() {
         currentScore.add(Score, multiplicateur)
         Score = 0
-        multiplicateur = 0
+        multiplicateur = 1
+        nbBalletouche = 0
         health -= 1
         this.collision2()
         this.position.set(this.reset)
@@ -66,11 +67,17 @@ class Ball {
 
     }
     rebond() {
-        if (this.position.x >= width - this.radius || this.position.x <= 0 + this.radius) {
+        if (this.position.x > width - this.radius) {
             this.speed.x = -this.speed.x / 1.1
+            this.position.x = width - this.radius
         }
-        if (this.position.y <= 0 + this.radius) {
+        if (this.position.x < this.radius) {
+            this.speed.x = -this.speed.x / 1.1
+            this.position.x = this.radius
+        }
+        if (this.position.y < this.radius) {
             this.speed.y = -this.speed.y / 1.1
+            this.position.y = this.radius
         }
     }
     collision(i, j) {
@@ -104,6 +111,19 @@ class Ball {
             if (X[i][j].color == 255) {
                 Score = Score + 1
                 multiplicateur = multiplicateur + 0.5
+                nbBalletouche = nbBalletouche + 1
+                if (nbBalletouche == 5){
+                    multiplicateur = multiplicateur + 2
+                }
+                if (nbBalletouche == 10){
+                    multiplicateur = multiplicateur + 10
+                }
+                if (nbBalletouche == 20){
+                    multiplicateur = multiplicateur + 100
+                }
+            }
+            if (X[i][j].color == 100){
+                Score = Score + 0.2
             }
             X[i][j].color = 100
             boing.play();

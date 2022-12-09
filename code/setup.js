@@ -1,5 +1,11 @@
 /**
  * @global
+ * @type {Boolean}
+ * @name Playing
+ */
+let Playing = false;
+/**
+ * @global
  * @type {any}
  * @name bord
  */
@@ -27,13 +33,19 @@ var Score = 0;
  * @type {number}
  * @name multiplicateur
  */
-var multiplicateur = 0;
+var multiplicateur = 1;
 /**
  * @global
  * @type {number}
  * @name nbBalleRestante
  */
 var nbBalleRestante = 0;
+/**
+ * @global
+ * @type {number}
+ * @name nbBalletouche
+ */
+var nbBalletouche = 0;
 /**
  * @global
  * @type {any}
@@ -82,6 +94,12 @@ let nbBallesligne;
  * @name nbBallesColonne
  */
 let nbBallesColonne;
+/**
+ * @global
+ * @type {number}
+ * @name offset
+ */
+let offset;
 /**
  * @global
  * @type {int}

@@ -30,7 +30,7 @@ function healthCheck() {
         textAlign(CENTER,CENTER);
         fill('red');
         text(affichageVie, width / 2, height / 3);
-        noLoop();
+        Playing = false;
     }
     if(nbBalleRestante <= 0){
         affichageVie = ` BIEN JOUE , tu a gagné avec un score de : ${currentScore.score} `
@@ -38,6 +38,6 @@ function healthCheck() {
         textAlign(CENTER,CENTER);
         fill('red');
         text(affichageVie, width / 2, height / 3);
-        noLoop();
+        Playing = false;
     }
 }
