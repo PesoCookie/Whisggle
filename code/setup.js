@@ -1,5 +1,11 @@
 /**
  * @global
+ * @type {Boolean}
+ * @name Playing
+ */
+let Playing = false;
+/**
+ * @global
  * @type {any}
  * @name bord
  */
@@ -70,6 +76,12 @@ let nbBallesligne;
  * @name nbBallesColonne
  */
 let nbBallesColonne;
+/**
+ * @global
+ * @type {number}
+ * @name offset
+ */
+let offset;
 /**
  * @global
  * @type {int}

@@ -30,6 +30,7 @@ class Pit {
      * @description Dessine le puit
      */
     show() {
+        fill(255);
         rect(this.position.x, this.position.y, this.size.x, this.size.y, 20, 20, 0, 0);
         fill(20);
         ellipse(this.position.x + this.size.x / 2, this.position.y + this.size.y / 3, this.size.x / 1.1, this.size.y / 2);
