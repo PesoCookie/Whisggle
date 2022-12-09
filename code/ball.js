@@ -126,6 +126,7 @@ class Ball {
                 Score = Score + 0.2
             }
             X[i][j].color = 100
+            boing.play();
         }
     }
     collision2() {

@@ -25,13 +25,19 @@ class score {
  */
 function healthCheck() {
     if (health <= 0) {
-        affichageVie = ` TA PERDU GROS NUL avec un score de : ${currentScore.score} `;
-        text(affichageVie, width / 4, height / 4);
+        affichageVie = ` TA PERDU GROS NUL avec un score de : ${currentScore.score} `
+        textSize(window.innerWidth / 20);
+        textAlign(CENTER,CENTER);
+        fill('red');
+        text(affichageVie, width / 2, height / 3);
         Playing = false;
     }
-    if (nbBalleRestante <= 0) {
-        affichageVie = ` BIEN JOUE , tu a gagné avec un score de : ${currentScore.score} `;
-        text(affichageVie, width / 4, height / 4);
+    if(nbBalleRestante <= 0){
+        affichageVie = ` BIEN JOUE , tu a gagné avec un score de : ${currentScore.score} `
+        textSize(window.innerWidth / 20);
+        textAlign(CENTER,CENTER);
+        fill('red');
+        text(affichageVie, width / 2, height / 3);
         Playing = false;
     }
 }
