@@ -6,8 +6,8 @@ function draw() {
     background(100);
     image(fond, 0, 0, width, height, 0, 0, fond.width, fond.height);
     image(bord, 0, 0, width, height, 0, 0, bord.width, bord.height, LEFT);
-
-    circle(width / 2, 0, width / 7); // Il y a des chances que cette ligne soit inutile dans le future
+    fill(255)
+    circle(width / 2, 0, width / 7); // Dessine le cercle de lancement
 
     // Déplace la balle qu'on utilise pour détruire les obstacles
     balle_principale.mouve();
@@ -46,15 +46,10 @@ function draw() {
     balle_principale.draw();
 
     //Dessine le fond des scores
-    image(fondScore, 0, 0, width / 4, height / 1.2 , 0, 0, fondScore.width, fondScore.height)
+    image(fondScore, 0, 0, width / 3.5, height / 1.2 , 0, 0, fondScore.width, fondScore.height)
 
-    // Affiche le score
-    affichageScore = `Score : ${currentScore.score}`
-    affichageVie = `Vie : ${health}`
-    affichageMultiplicateur = `Multiplicateur : ${multiplicateur}`
-    text(affichageScore, width / 70, height / 12)
-    text(affichageVie, width / 70, height / 7)
-    text(affichageMultiplicateur, width / 70, height / 5)
+    // Appelle de l'affichage
+    affichage();
 
     // Vérifie si le joueur n'as plus de vie et message de mort
     healthCheck()
@@ -67,4 +62,18 @@ function mousePressed() {
     if (en_cours != true) {
         balle_principale.launch();
     }
+}
+//Fonction d'affichage
+function affichage(){
+    affichageScore = `Score : ${currentScore.score}`
+    affichageVie = `Vie : ${health}`
+    affichageMultiplicateur = `Multiplicateur : ${multiplicateur}`
+    textSize(window.innerWidth / 35);
+    textAlign(LEFT,BOTTOM);
+    fill('#EE8D11');
+    text(affichageScore, width / 70, height / 12);
+    fill('red');
+    text(affichageVie, width / 70, height / 7);
+    fill('#08C6F9');
+    text(affichageMultiplicateur, width / 70, height / 5);
 }
