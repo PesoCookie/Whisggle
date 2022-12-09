@@ -106,6 +106,7 @@ class Ball {
                 multiplicateur = multiplicateur + 0.5
             }
             X[i][j].color = 100
+            boing.play();
         }
     }
     collision2() {

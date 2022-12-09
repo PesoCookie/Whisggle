@@ -62,6 +62,7 @@ function mousePressed() {
     if (en_cours != true) {
         balle_principale.launch();
     }
+    
 }
 //Fonction d'affichage
 function affichage(){

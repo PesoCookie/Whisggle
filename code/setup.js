@@ -6,6 +6,18 @@
 let bord;
 /**
  * @global
+ * @type {any}
+ * @name musique
+ */
+let musique;
+/**
+ * @global
+ * @type {any}
+ * @name boing
+ */
+let boing;
+/**
+ * @global
  * @type {number}
  * @name Score
  */
@@ -130,8 +142,11 @@ var magic_pit;
 function preload() {
     bord = loadImage('assets/bord.png');
     fond = loadImage('assets/fond.jpg');
-    fondScore = loadImage('assets/Fond_Score.png')
-    fontImpact = loadFont('fonts/PartyConfetti.ttf')
+    fondScore = loadImage('assets/Fond_Score.png');
+    fontImpact = loadFont('fonts/PartyConfetti.ttf');
+    soundFormats('mp3', 'ogg');
+    musique = loadSound('sound/music.mp3');
+    boing = loadSound('sound/boing.mp3');
 }
 
 /**
@@ -162,4 +177,5 @@ function setup() {
     health = 25;
     //Le score
     currentScore = new score(0);
+    musique.play();
 }
