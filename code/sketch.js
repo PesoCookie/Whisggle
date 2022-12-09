@@ -65,8 +65,8 @@ function mousePressed() {
 }
 //Fonction d'affichage
 function affichage(){
-    affichageScore = `Score : ${currentScore.score}`
-    affichageVie = `Vie : ${health}`
+    affichageScore = `Score : ${currentScore.score}`;
+    affichageVie = `Vie : ${health}`;
     affichageMultiplicateur = `Multiplicateur : ${multiplicateur}`
     textSize(window.innerWidth / 35);
     textAlign(LEFT,BOTTOM);

@@ -29,15 +29,15 @@ function healthCheck() {
         textSize(window.innerWidth / 20);
         textAlign(CENTER,CENTER);
         fill('red');
-        text(affichageVie, width / 2, height / 3)
-        noLoop()
+        text(affichageVie, width / 2, height / 3);
+        noLoop();
     }
     if(nbBalleRestante <= 0){
         affichageVie = ` BIEN JOUE , tu a gagné avec un score de : ${currentScore.score} `
         textSize(window.innerWidth / 20);
         textAlign(CENTER,CENTER);
         fill('red');
-        text(affichageVie, width / 2, height / 3)
-        noLoop()
+        text(affichageVie, width / 2, height / 3);
+        noLoop();
     }
 }
