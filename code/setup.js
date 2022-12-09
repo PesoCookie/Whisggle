@@ -18,6 +18,12 @@ var Score = 0;
 var multiplicateur = 0;
 /**
  * @global
+ * @type {number}
+ * @name nbBalleRestante
+ */
+var nbBalleRestante = 0;
+/**
+ * @global
  * @type {any}
  * @name fond
  */
@@ -152,6 +158,7 @@ function setup() {
     obstacleRadius = width / 53;
     tableau();
     //Nombre d'essai
+    nbBalleRestante = maxScore;
     health = 25;
     //Le score
     currentScore = new score(0);

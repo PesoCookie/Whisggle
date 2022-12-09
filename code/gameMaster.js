@@ -29,4 +29,9 @@ function healthCheck() {
         text(affichageVie, width / 4, height / 4)
         noLoop()
     }
+    if(nbBalleRestante <= 0){
+        affichageVie = ` BIEN JOUE , tu a gagné avec un score de : ${currentScore.score} `
+        text(affichageVie, width / 4, height / 4)
+        noLoop()
+    }
 }

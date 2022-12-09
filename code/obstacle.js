@@ -27,6 +27,8 @@ class Obstacle {
             if (this.color == 100) {
                 this.radius = 0
                 this.position.x = width * 2
+                this.color = 200
+                nbBalleRestante -= 1
             }
         }
     }

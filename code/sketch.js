@@ -46,7 +46,7 @@ function draw() {
     balle_principale.draw();
 
     //Dessine le fond des scores
-    image(fondScore, 0, 0, width / 5, height / 6)
+    image(fondScore, 0, 0, width / 4, height / 1.2 , 0, 0, fondScore.width, fondScore.height)
 
     // Affiche le score
     affichageScore = `Score : ${currentScore.score}`
