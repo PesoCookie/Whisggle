@@ -16,7 +16,7 @@ class Obstacle {
         this.position = new Point2d(positionx, positiony);
         this.color = color
         this.radius = radius
-    };
+    }
     /**
      * @description Dessine l'obstacle
      */
@@ -27,7 +27,6 @@ class Obstacle {
             if (this.color == 100) {
                 this.radius = 0
                 this.position.x = width * 2
-                this.color = 200
                 nbBalleRestante -= 1
             }
         }

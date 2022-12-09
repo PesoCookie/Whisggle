@@ -21,13 +21,19 @@ var Score = 0;
  * @type {number}
  * @name multiplicateur
  */
-var multiplicateur = 0;
+var multiplicateur = 1;
 /**
  * @global
  * @type {number}
  * @name nbBalleRestante
  */
 var nbBalleRestante = 0;
+/**
+ * @global
+ * @type {number}
+ * @name nbBalletouche
+ */
+var nbBalletouche = 0;
 /**
  * @global
  * @type {any}
