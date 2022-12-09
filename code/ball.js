@@ -112,17 +112,17 @@ class Ball {
                 Score = Score + 1
                 multiplicateur = multiplicateur + 0.5
                 nbBalletouche = nbBalletouche + 1
-                if (nbBalletouche == 5){
+                if (nbBalletouche == 5) {
                     multiplicateur = multiplicateur + 2
                 }
-                if (nbBalletouche == 10){
+                if (nbBalletouche == 10) {
                     multiplicateur = multiplicateur + 10
                 }
-                if (nbBalletouche == 20){
+                if (nbBalletouche == 20) {
                     multiplicateur = multiplicateur + 100
                 }
             }
-            if (X[i][j].color == 100){
+            if (X[i][j].color == 100) {
                 Score = Score + 0.2
             }
             X[i][j].color = 100

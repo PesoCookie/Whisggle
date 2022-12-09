@@ -52,7 +52,7 @@ function draw() {
         affichage();
 
         // Vérifie si le joueur n'as plus de vie et message de mort
-        healthCheck()
+        healthCheck();
     } else {
         textAlign(CENTER, CENTER);
         fill(255);
@@ -76,15 +76,15 @@ function mousePressed() {
             setup();
         }
     }
-    
+
 }
 //Fonction d'affichage
-function affichage(){
+function affichage() {
     affichageScore = `Score : ${currentScore.score}`;
     affichageVie = `Vie : ${health}`;
     affichageMultiplicateur = `Multiplicateur : ${multiplicateur}`
     textSize(window.innerWidth / 35);
-    textAlign(LEFT,BOTTOM);
+    textAlign(LEFT, BOTTOM);
     fill('#EE8D11');
     text(affichageScore, width / 70, height / 12);
     fill('red');

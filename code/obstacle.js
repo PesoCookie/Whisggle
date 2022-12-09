@@ -13,13 +13,13 @@ class Obstacle {
      * @property {string} color Couleur de l'obstacle
      */
     constructor(radius, color, positionx, positiony) {
-        this.position = new Point2d(positionx, positiony);
-        this.color = color
-        this.radius = radius
-    }
-    /**
-     * @description Dessine l'obstacle
-     */
+            this.position = new Point2d(positionx, positiony);
+            this.color = color
+            this.radius = radius
+        }
+        /**
+         * @description Dessine l'obstacle
+         */
     draw() {
         fill(this.color);
         circle(this.position.x, this.position.y, this.radius);
@@ -27,6 +27,7 @@ class Obstacle {
             if (this.color == 100) {
                 this.radius = 0
                 this.position.x = width * 2
+                this.color = 200
                 nbBalleRestante -= 1
             }
         }
