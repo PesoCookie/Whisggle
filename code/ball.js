@@ -66,11 +66,17 @@ class Ball {
 
     }
     rebond() {
-        if (this.position.x >= width - this.radius || this.position.x <= 0 + this.radius) {
+        if (this.position.x > width - this.radius) {
             this.speed.x = -this.speed.x / 1.1
+            this.position.x = width - this.radius
         }
-        if (this.position.y <= 0 + this.radius) {
+        if (this.position.x < this.radius) {
+            this.speed.x = -this.speed.x / 1.1
+            this.position.x = this.radius
+        }
+        if (this.position.y < this.radius) {
             this.speed.y = -this.speed.y / 1.1
+            this.position.y = this.radius
         }
     }
     collision(i, j) {
