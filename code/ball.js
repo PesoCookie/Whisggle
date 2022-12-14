@@ -125,7 +125,7 @@ class Ball {
             if (X[i][j].color == 100) {
                 Score = Score + 0.2
             }
-            X[i][j].color = 100
+            X[i][j].color = 100;
             boing.play();
         }
     }

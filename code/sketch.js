@@ -2,6 +2,7 @@
  * @description Dessine une frame
  */
 function draw() {
+    background(200);
     if (Playing == true) {
         // Dessine le background et les bords
         image(fond, 0, 0, width, height, 0, 0, fond.width, fond.height);
