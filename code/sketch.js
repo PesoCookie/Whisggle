@@ -2,7 +2,7 @@
  * @description Dessine une frame
  */
 function draw() {
-    background(200);
+    background(2, 247, 137);
     if (Playing == true) {
         // Dessine le background et les bords
         image(fond, 0, 0, width, height, 0, 0, fond.width, fond.height);
@@ -49,17 +49,23 @@ function draw() {
         //Dessine le fond des scores
         image(fondScore, 0, 0, width / 4, height / 1.2, 0, 0, fondScore.width, fondScore.height)
 
-        // Appelle de l'affichage
-        affichage();
-
         // Vérifie si le joueur n'as plus de vie et message de mort
         healthCheck();
+
+        //enlève le slider
     } else {
+        // Affiche un gros bouton play pour lancer le jeu
         textAlign(CENTER, CENTER);
         fill(255);
         textSize((height + width) / 10);
         text('Play', width / 2, height / 2);
+
+        //affiche le slider de difficulté
+        slider_health.position(width / 70, height / 7);
+        health = slider_health.value();
     }
+    // Appelle de l'affichage
+    affichage();
 }
 
 /**
@@ -73,16 +79,23 @@ function mousePressed() {
     } else {
         if (mouseX < width / 2 + (height + width) / 10 & mouseX > width / 2 - (height + width) / 10 & mouseY < height / 2 + height / 10 & mouseY > height / 2 - height / 10) {
             Playing = true;
+            slider_health.position(width, height);
+            health = slider_health.value();
             setup();
         }
     }
+    if (health == 0 || nbBalleRestante == 0) {
+        Playing = false;
+    }
+
 
 }
 //Fonction d'affichage
 function affichage() {
     affichageScore = `Score : ${currentScore.score}`;
     affichageVie = `Vie : ${health}`;
-    affichageMultiplicateur = `Multiplicateur : ${multiplicateur}`
+    affichageMultiplicateur = `Multiplicateur : ${multiplicateur}`;
+    affichageHighScore = `Meilleur Score : ${highScore}`;
     textSize(window.innerWidth / 35);
     textAlign(LEFT, BOTTOM);
     fill('#EE8D11');
@@ -91,4 +104,7 @@ function affichage() {
     text(affichageVie, width / 70, height / 7);
     fill('#08C6F9');
     text(affichageMultiplicateur, width / 70, height / 5);
+    textAlign(RIGHT, BOTTOM);
+    fill('#EE8D11');
+    text(affichageHighScore, width * 0.99, height / 12);
 }
