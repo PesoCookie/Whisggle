@@ -109,6 +109,12 @@ let maxScore;
 /**
  * @global
  * @type {string}
+ * @name highScore
+ */
+let highScore;
+/**
+ * @global
+ * @type {string}
  * @name affichageScore
  */
 let affichageScore;
@@ -155,6 +161,12 @@ var obstacleRadius;
  */
 var magic_pit;
 /**
+ * @global
+ * @type {slider}
+ * @name slider_health
+ */
+var slider_health;
+/**
  * @description Précharge les images et assets
  */
 function preload() {
@@ -190,9 +202,11 @@ function setup() {
     maxScore = nbBallesColonne * nbBallesligne;
     obstacleRadius = width / 53;
     tableau();
+    //Définition du slider
+    slider_health = createSlider(1, 50, 25, 1);
+    slider_health.style('width', '80px');
     //Nombre d'essai
     nbBalleRestante = maxScore;
-    health = 25;
     //Le score
     currentScore = new score(0);
     if (Playing == true) {

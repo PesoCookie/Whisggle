@@ -26,18 +26,21 @@ class score {
 function healthCheck() {
     if (health <= 0) {
         affichageVie = ` TA PERDU GROS NUL avec un score de : ${currentScore.score} `
-        textSize(window.innerWidth / 20);
-        textAlign(CENTER,CENTER);
-        fill('red');
-        text(affichageVie, width / 2, height / 3);
-        Playing = false;
+        fin();
     }
-    if(nbBalleRestante <= 0){
+    if (nbBalleRestante <= 0) {
         affichageVie = ` BIEN JOUE , tu a gagné avec un score de : ${currentScore.score} `
-        textSize(window.innerWidth / 20);
-        textAlign(CENTER,CENTER);
-        fill('red');
-        text(affichageVie, width / 2, height / 3);
-        Playing = false;
+        fin();
+    }
+}
+
+function fin() {
+    textSize(window.innerWidth / 20);
+    textAlign(CENTER, CENTER);
+    fill('red');
+    text(affichageVie, width / 2, height / 3);
+    musique.stop();
+    if (currentScore.score > highScore || highScore == undefined) {
+        highScore = currentScore.score
     }
 }
